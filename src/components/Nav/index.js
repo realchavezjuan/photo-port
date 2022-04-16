@@ -23,16 +23,20 @@ function Nav(props) {
           <span role="img" aria-label="camera"> 📸</span> Oh Snap!
         </a>
       </h2>
+      {/* navigation */}
       <nav>
         <ul className="flex-row">
+          {/* about */}
           <li className="mx-2">
           <a data-testid="about" href="#about" onClick={() => setContactSelected(false)}>
               About me
             </a>
           </li>
+          {/* contact */}
           <li className={`mx-2 ${contactSelected && 'navActive'}`}>
             <span onClick={() => setContactSelected(true)}>Contact</span>
           </li>
+          {/* categories */}
           {categories.map((category) => (
             <li
               className={`mx-1 ${
